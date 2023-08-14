@@ -15,13 +15,19 @@ class TypeUserSeeder extends Seeder
     {
         $type_user = [
             [
-                'name' => 'Pasien'
+                'name' => 'Pasien',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'name' => 'Admin'
+                'name' => 'Admin',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'name' => 'Dokter'
+                'name' => 'Dokter',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
             ],
             
         ];
