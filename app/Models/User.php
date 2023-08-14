@@ -3,6 +3,10 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+
+use App\Models\Management_access\Detail_user;
+use App\Models\Management_access\Role_user;
+use App\Models\Operational\Appointment;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -58,4 +62,16 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function role_users(){
+        return $this->hasMany(Role_user::class);
+    }
+    
+    public function appointments(){
+        return $this->hasMany(Appointment::class);
+    }
+
+    public function detail_user(){
+        return $this->hasOne(Detail_user::class);
+    }
 }

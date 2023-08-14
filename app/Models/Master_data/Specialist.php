@@ -2,6 +2,7 @@
 
 namespace App\Models\Master_data;
 
+use App\Models\Operational\Doctor;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -24,4 +25,8 @@ class Specialist extends Model
         'name',
         'price',
     ];
+
+    public function doctor(){
+        return $this->hasMany(Doctor::class);
+    }
 }

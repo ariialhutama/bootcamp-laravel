@@ -2,6 +2,7 @@
 
 namespace App\Models\Operational;
 
+use App\Models\Operational\Appointment;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -29,4 +30,8 @@ class Transaction extends Model
         'vat',
         'total',
     ];
+
+    public function appointment(){
+        return $this->belongsTo(Appointment::class);
+    }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Models\Master_data;
 
+use App\Models\Operational\Appointment;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -23,4 +24,8 @@ class Consultation extends Model
     protected $fillable =[
         'name',
     ];
+
+    public function appointments(){
+        return $this->hasMany(Appointment::class);
+    }
 }

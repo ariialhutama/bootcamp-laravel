@@ -3,6 +3,7 @@
 namespace App\Models\Management_access;
 
 use App\Models\Master_data\Type_user;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -34,5 +35,8 @@ class Detail_user extends Model
 
     public function type_user (){
         return $this->belongsTo(Type_user::class);
+    }
+    public function user (){
+        return $this->belongsTo(User::class);
     }
 }
