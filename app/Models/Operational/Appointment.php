@@ -42,7 +42,6 @@ class Appointment extends Model
     public function doctor(){
         return $this->belongsTo(Doctor::class);
     }
-
     public function transaction(){
         return $this->hasOne(Transaction::class);
     }
