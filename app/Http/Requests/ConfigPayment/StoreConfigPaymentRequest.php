@@ -23,10 +23,10 @@ class StoreConfigPaymentRequest extends FormRequest
     {
         return [
             'fee' => [
-                'required', 'integer', 'max:255',
+                'required', 'string', 'max:255',
             ],
             'vat' => [
-                'required', 'integer', 'max:255',
+                'required', 'string', 'max:255',
             ],
         ];
     }

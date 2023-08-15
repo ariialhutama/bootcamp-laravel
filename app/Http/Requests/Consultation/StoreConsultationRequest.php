@@ -11,7 +11,7 @@ class StoreConsultationRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,7 +23,7 @@ class StoreConsultationRequest extends FormRequest
     {
         return [
             'name'=>[
-                'required', 'string', 'max:255',
+                'required', 'string', 'max:255', 'unique:consultations'
             ]
         ];
     }
