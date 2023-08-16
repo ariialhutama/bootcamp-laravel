@@ -10,8 +10,8 @@
 				<img src="{{ asset('/assets/frontsite/images/hero-image.png') }}"
 					class="bg-cover bg-center object-cover object-center max-h-[580px]" alt="Hero Image" />
 				<div class="text-center absolute bottom-0 -left-20 -translate-y-14 bg-white px-7 py-5 rounded-xl shadow-2xl">
-					<h5 class="font-medium text-[#1E2B4F]">Dr. Kartika Me</h5>
-					<p class="text-xs text-[#AFAEC3] mt-1">Nutrionist</h1>
+					<h5 class="font-medium text-[#1E2B4F]">Apt. Asyari Al Hutama</h5>
+					<p class="text-xs text-[#AFAEC3] mt-1">Apoteker</h1>
 						<span class="block text-xs text-[#1E2B4F] font-medium bg-[#F2F6FE] px-4 py-2 rounded-full text-center mt-7">Book
 							Now</span>
 				</div>
@@ -73,5 +73,29 @@
 				</div>
 			</div>
 		</section>
+
+		<!-- Popular Categories -->
+		<section class="mt-32 bg-[#F9FBFC]">
+			<div class="mx-auto max-w-7xl px-4 lg:px-14 py-16">
+				<h3 class="text-2xl font-semibold">Popular Categories</h3>
+				<p class="text-[#A7B0B5] mt-2">Quick way to get your first experience</p>
+
+				{{-- <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 md:gap-10 lg:gap-12 mt-10">
+					@forelse($specialist as $key => $specialist_item)
+						<!-- Card -->
+						<a href="#"
+							class="bg-white py-6 px-5 rounded-2xl transition hover:ring-offset-2 hover:ring-2 hover:ring-[#0D63F3]">
+							<h5 class="text-[#1E2B4F] text-lg font-semibold">{{ $specialist_item->name ?? '' }}</h5>
+							<p class="text-[#AFAEC3] mt-1">143 doctors</p>
+						</a>
+						<!-- End Card -->
+					@empty
+						{{-- empty --}}
+				{{-- @endforelse --}}
+				{{-- </div> --}}
+
+			</div>
+		</section>
+		<!-- End Popular Categories -->
 	</main>
 @endsection
